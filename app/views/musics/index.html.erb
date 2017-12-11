@@ -1,0 +1,40 @@
+<%= render 'navigation' %>
+<p id="notice"><%= notice %></p>
+
+<div class="home wrapper">
+<h1>Rundown Band Performance</h1>
+
+<table class="">
+  <thead>
+    <tr>
+      <th>Nama band</th>
+      <th>Asal</th>
+      <th>Jumlah personil</th>
+      <th>Nama manager</th>
+      <th>Genre</th>
+      <th>Jadwal tampil</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @musics.each do |music| %>
+      <tr>
+        <td><%= music.Nama_Band %></td>
+        <td><%= music.Asal %></td>
+        <td><%= music.Jumlah_Personil %></td>
+        <td><%= music.Nama_Manager %></td>
+        <td><%= music.Genre %></td>
+        <td><%= music.Jadwal_Tampil %></td>
+        <td><%= link_to 'Detail', music %></td>
+        <td><%= link_to 'Edit', edit_music_path(music) %></td>
+        <td><%= link_to 'Delete', music, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Tambah List', new_music_path, class:'button' %>
+</div>

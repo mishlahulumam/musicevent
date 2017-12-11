@@ -1,0 +1,42 @@
+<%= render 'navigation' %>
+<div class="wrapper">
+<p id="notice"><%= notice %></p>
+
+  <table style="margin:auto;">
+    <tr>
+      <th style="text-align:right">Nama band :</th>
+  <td><%= @music.Nama_Band %></td>
+</tr>
+
+<tr>
+  <th style="text-align:right">Asal :</th>
+  <td><%= @music.Asal %></td>
+</tr>
+
+<tr>
+  <th style="text-align:right">Jumlah personil :</th>
+  <td><%= @music.Jumlah_Personil %></td>
+</tr>
+
+<tr>
+  <th style="text-align:right">Nama manager :</th>
+  <td><%= @music.Nama_Manager %></td>
+</tr>
+
+<tr>
+  <th style="text-align:right">Genre :</th>
+  <td><%= @music.Genre %></td>
+</tr>
+
+<tr>
+  <th style="text-align:right">Jadwal tampil :</th>
+  <td><%= @music.Jadwal_Tampil %></td>
+</tr>
+</table>
+
+
+</div>
+<div style="width: 80%;margin:auto;margin-top: 10px;">
+<%= link_to 'Edit', edit_music_path(@music), class:'button' %> |
+<%= link_to 'Back', musics_path, class:'button' %>
+</div>

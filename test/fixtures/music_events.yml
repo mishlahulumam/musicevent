@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Nama_Band: MyString
+  Asal: MyString
+  Jumlah_Personil: 1
+  Nama_Manager: MyString
+  Genre: MyString
+  Jadwal_Tampil: 2017-10-13 00:07:35
+
+two:
+  Nama_Band: MyString
+  Asal: MyString
+  Jumlah_Personil: 1
+  Nama_Manager: MyString
+  Genre: MyString
+  Jadwal_Tampil: 2017-10-13 00:07:35

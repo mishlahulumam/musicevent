@@ -1,0 +1,47 @@
+<div class="form1">
+<%= form_with(model: music, local: true) do |form| %>
+  <% if music.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(music.errors.count, "error") %> prohibited this music from being saved:</h2>
+
+      <ul>
+      <% music.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Nama_Band %>
+    <%= form.text_field :Nama_Band, id: :music_Nama_Band %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Asal %>
+    <%= form.text_field :Asal, id: :music_Asal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Jumlah_Personil %>
+    <%= form.number_field :Jumlah_Personil, id: :music_Jumlah_Personil %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Nama_Manager %>
+    <%= form.text_field :Nama_Manager, id: :music_Nama_Manager %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Genre %>
+    <%= form.text_field :Genre, id: :music_Genre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Jadwal_Tampil %>
+    <%= form.datetime_select :Jadwal_Tampil, id: :music_Jadwal_Tampil %>
+  </div>
+
+    <%= form.submit 'tambah', class:'button' %>
+<% end %>
+</div>

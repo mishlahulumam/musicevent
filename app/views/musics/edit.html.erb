@@ -1,0 +1,11 @@
+<%= render 'navigation' %>
+<div class="wrapper">
+<h1>Perbaharui Data</h1>
+
+<%= render 'form', music: @music %>
+
+</div>
+<div style="width: 80%;margin:auto;margin-top: 10px;">
+<%= link_to 'Show', @music, class:'button' %> |
+<%= link_to 'Back', musics_path, class:'button' %>
+</div>
